@@ -2622,8 +2622,8 @@ input, select, textarea {
 }
 
 .container img {
-    width: 30em;
-    height: 30em;
+    width: 25em;
+    height: 25em;
     object-fit: cover; /* keeps image filling the square */
     flex-shrink: 0;
 	margin: 0 0 0 3em;
