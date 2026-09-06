@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Stacy Chen - Cormorant</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">STACY CHEN</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Me + Projects</a></li>
+						<li><a href="index.html#other_things">Other things</a></li>
+						<li><a href="#"  class="active">Cormorant</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div>
+				<section id="main" class="wrapper">
+					<div class="inner">
+						<h2 class="major">Species Distribution Modelling</h2>
+						<p>
+							I spent my summer at WWF (World Wildlife Fund) in DC! My main project there was 
+                            analyzing where detrimental agricultural pests would migrate to over the next few decades due to climate change.
+						</p>
+                        <p>
+                            tl;dr The steps involved:
+                            <ol>
+                                <li>Identifying the most detrimental pests through USDA census data and publications</li>
+                                <li>Locating the most detrimental pests through sightings on GBIF and iNaturalist.</li>
+                                <li>Generate pseudo-absence data (R), aka where pests have not been seen</li>
+                                <li>Train various models with stratified k-fold cross validation</li>
+                                <li>Calculate the best probability presence threshold using True Skills Statistic scores</li>
+                                <li>Checked Pearson's correlation scores between features to observe how similar features were</li>
+                                <li>Selected models with high ROC-AUC and TSS scores to create a voting classifier</li>
+                                <li>Use the voting classifier to predict future presences based on future climate data models (MPI-ESMI1.2 HR) and scenarios,
+                                     also still optimizing the threshold.</li>
+                                <li>Report these findings! I displayed the generated geoTIFF files on ArcGIS Pro.</li>
+                            </ol>
+                        </p>
+						<p>
+                            If you are curious about the steps in more depth, it is detailed further in <a href="https://drive.google.com/file/d/1tXbt232g7nRO4PnPgh-Tn-UsdOWCAPZE/view?usp=sharing">my paper</a>.
+
+                            <br>
+                            as well as the <a href= "https://github.com/stacyc2449/wwf-sdm/tree/main">codebase</a>.
+                        </p>
+						<br>
+                        <div class="container" style="--img-width: 33em; --img-height: 20em">
+							<img src="images/purple corn 585.jpg">
+                            <img src="images/ezgif.com-optimize.gif">
+					    </div>
+                        <p>
+                            Left: presence of corn pests by 2070 in an extreme shared socioeconomic pathway (SSP 5.85),
+                            right: spread of northern corn rootworms by 2070 depending on shared socioeconomic pathway scenario.
+                        </p>
+                        <div class="container" style="--img-width: 55em; --img-height: 20em">
+							<img src="images/sdm_modelling.png">
+					    </div>
+                        <br>
+                        <div class="container" style="--img-width: 33em; --img-height: 20em">
+                            <img src="images/sdm_validation_set.png">
+					    </div>
+                        
+					</div>
+                    
+				</section>
+			</div>
+			<br>
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Stacy Chen. All rights reserved.</li><li>Design: Modified from <a href="http://html5up.net">HTML5 UP</a></li><li>Email: stacky@mit.edu</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

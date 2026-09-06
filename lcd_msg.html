@@ -15,7 +15,7 @@
 				<nav>
 					<ul>
 						<li><a href="index.html">Me + Projects</a></li>
-						<li><a href="generic.html">Other things</a></li>
+						<li><a href="index.html#other_things">Other things</a></li>
 						<li><a href="#"  class="active">MQTT Communication</a></li>
 					</ul>
 				</nav>
@@ -24,22 +24,47 @@
 				<section id="main" class="wrapper">
 					<div class="inner">
 						<h2 class="major">MQTT Communication</h2>
-					</div>
-					<div class="container">
-						<img src="images/cormorant_base_cp.png" alt="cormorant crease pattern">
-						<div class="text">
-							<p>
-								I finally started trying to design origami. This is my first design, made by modifying traditional bases.
-								It's a mix of a bird base and a frog base, with a sink in the center. Crease pattern and folded base 
-								(without the sink) made on <a href="https://oriedita.github.io/">Oriedita</a>
-								<br>
-								If I were to do it again, I would want a different way to sink the center, since it is a little awkward - but it's the most important part for the structure.
-							</p>
+						<p>
+							I'm calling this a longer duration project because this project was pretty on and off, and was mostly born out of random things I had acquired.	
+							<br><br>
+							<strong>Goal:</strong> To design two little devices that could ping each other as long as they are both connected to Wi-Fi, and for it to be cost effective.
+							I wanted this to be a cute thing that could be shared between people.
+						</p>
+						<div class="container">
+							<img src="images/cormorant_base_cp.png">
+							<div class="text">
+								<p>
+									<strong>Final Prototype Design:</strong> <br>
+									It's an LCD with an i2c backpack communicating with a Raspberry Pico W, with a button. When powered on, it connects to Wi-Fi and shows 
+									the display screen. When the device receives a ping, the heart changes. When the user presses the button, the device sends a ping out, and a dot appears on the LCD.
+									The codebase is in Micropython, and is available here.
+									<br><br>
+									I chose to use a Raspberry Pico W, because it has Wi-Fi connectivity and it's an easily accessible microcontroller. Also what I had on hand. For a non-prototype design,
+									a custom board would be nice, and definitely more compact.
+								</p>
+							</div>
 						</div>
-					</div>
-					<br>  	
-					<div class="container">
-						<img src="images/cormorant_base_folded.png" alt="cormorant folded base without sink">
+						<br>
+						<div>
+							<p>
+								This was a very heavy prototype-type project, with less emphasis on custom parts, since these were materials I happened to have. 
+								<br>
+								<strong>My original plan:</strong> (brace yourself)
+								<br>
+								A Raspberry Pi that would constantly pull from a GitHub repository that contains a txt file, that would get edited by each device
+								when a button was pressed.
+								<br><br>
+								This would be overbuilt, also would need the Pis to store GitHub credentials and constantly pull and push to a repo unsupervised.
+							</p>
+							<p>
+								After a bit I found out about MQTT servers, which meant that I didn't need a computer, I only needed a microcontroller, and no bad Git practices needed!
+								<br>
+								Most of the project fell together after that. I also found i2c backpacks for the LCDs, so less pins used! Although I do still have a lot of pins to spare.
+							</p>
+						</div>  	
+						<div class="container">
+							<img src="images/cormorant_base_folded.png" alt="cormorant folded base without sink">
+						</div>
 					</div>
 				</section>
 
@@ -49,7 +74,7 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Stacy Chen. All rights reserved.</li><li>Design: Modified from <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Stacy Chen. All rights reserved.</li><li>Design: Modified from <a href="http://html5up.net">HTML5 UP</a></li><li>Email: stacky@mit.edu</li>
 					</ul>
 				</div>
 			</footer>
